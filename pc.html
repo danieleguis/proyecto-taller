@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>PC - Juegos Destacados</title>
+<style type="text/css">
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #333;
+}
+
+#general {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#encabezado {
+    background-image: url('DYNASTY (2).png'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 300px;
+}
+
+#menu {
+    background-color: #560B0F; 
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#menu .btn {
+    text-decoration: none;
+    padding: 10px 20px; 
+    font-size: 1rem;
+    color: #B71C1C;
+    background: #FFFFFF;
+    border-radius: 50px;
+    position: relative;
+    display: inline-flex; 
+    justify-content: center; 
+    align-items: center; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 10px; 
+    width: 120px; 
+    line-height: 1.5;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+    border: 2px solid #FBC02D; 
+}
+
+#menu .btn:hover {
+    transform: translate(-10px, -10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: "Arial Black";
+}
+
+#contenido {
+    background-color: #FFFFFF;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: auto;
+    max-width: 900px;
+    text-align: center;
+    font-family: "Arial Black";
+}
+
+#contenido h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+#contenido p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #7F7979;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px; 
+}
+
+.galeria img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+.tabla-ranking {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 900px;
+}
+
+.tabla-ranking th, .tabla-ranking td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.tabla-ranking th {
+    background-color: #560B0F;
+    color: white;
+}
+
+.tabla-ranking img {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    border-radius: 5px;
+}
+
+#ubicacion {
+    margin: auto;
+    max-width: 900px;
+    padding: 20px;
+    color: #000000;
+}
+
+#ubicacion iframe {
+    width: 100%;
+    height: 450px; 
+    border: 0;
+    box-sizing: border-box;
+}
+
+.pie-pagina {
+    background-color: #560B0F;
+    padding: 20px 0; 
+    color: #fff;
+    box-sizing: border-box;
+    text-align: center;
+    width: 100%;
+}
+
+.pie-pagina .red-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; 
+    margin-bottom: 10px; 
+}
+
+.pie-pagina .red-social-icons a {
+    width: 40px; 
+    height: 40px; 
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    border: 2px solid #560B0F;
+    background-size: cover;
+    background-position: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.pie-pagina .red-social-icons a:hover {
+    background-color: #1e88e5;
+    transform: scale(1.1);
+}
+
+.pie-pagina .discord {
+    background-image: url('discord.png');
+}
+
+.pie-pagina .instagram {
+    background-image: url('instagram.png');
+}
+
+.pie-pagina .twitter {
+    background-image: url('twitter-alt.png');
+}
+
+.pie-pagina .youtube {
+    background-image: url('youtube.png');
+}
+
+.pie-pagina .copyright {
+    font-size: 14px;
+    color: #e0e0e0;
+}
+</style>
+</head>
+
+<body>
+<div id="general">
+  <div id="encabezado"></div>
+  <div id="menu">
+    <a href="index.html" class="btn">INICIO</a>
+    <a href="playstation.html" class="btn">PLAYSTATION</a>
+    <a href="xbox.html" class="btn">XBOX</a>
+    <a href="pc.html" class="btn">PC</a>
+    <a href="creador.html" class="btn">CREADOR</a>
+  </div>
+  <div id="contenido">
+    <h1>JUEGOS PARA PC&nbsp;</h1>
+    <p>Desde intensas batallas en el dinámico "Helldivers" hasta la experiencia de supervivencia en el mundo abierto de "Fortnite", la variedad en los juegos para PC es impresionante. "Stellar Blade" nos ofrece una aventura épica con gráficos deslumbrantes, mientras que "Rise of the Ronin" lleva la acción samurái a nuevas alturas. "The Last of Us Part III" promete una narrativa conmovedora y profunda, y "Spider-Man 3" ofrece una emocionante continuación de las aventuras del famoso superhéroe en un mundo lleno de acción. Cada uno de estos títulos destaca por su innovación y capacidad para ofrecer experiencias únicas a los jugadores.</p>
+
+    <div class="galeria">
+      <img src="h3m0uwn6.png" alt="Helldivers">
+      <img src="le6orktj.png" alt="Fortnite">
+      <img src="ue08ci7p.png" alt="Stellar Blade">
+      <img src="uw0h9sxh.png" alt="Rise of the Ronin">
+      <img src="3wqiw4wc.png" alt="The Last of Us Part III">
+      <img src="vco73lu9.png" alt="Spider-Man 3">
+    </div>
+
+    <h2>JUEGOS POPULARES&nbsp;</h2>
+    <table class="tabla-ranking">
+      <thead>
+        <tr>
+          <th>Posición</th>
+          <th>Juego</th>
+          <th>Portada&nbsp;</th>
+          <th>Precio</th>
+          <th>Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>God of War</td>
+          <td><img src="qbt3oabm.png" alt="God of War"></td>
+          <td>$59.99</td>
+          <td>Una épica aventura mitológica con una historia profunda y una jugabilidad emocionante.</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Horizon Zero Dawn</td>
+          <td><img src="j160740d.png" alt="Horizon Zero Dawn"></td>
+          <td>$49.99</td>
+          <td>Un mundo abierto post-apocalíptico con una protagonista valiente y una historia cautivadora.</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>La Forma Final</td>
+          <td><img src="4i78p2me.png" alt="La Forma Final"></td>
+          <td>$39.99</td>
+          <td>Un juego innovador con mecánicas únicas y una trama intrigante.</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Ghost</td>
+          <td><img src="70qjs17c.png" alt="Ghost"></td>
+          <td>$44.99</td>
+          <td>Un juego de acción y aventura con una atmósfera envolvente y una narrativa fuerte.</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Returnal</td>
+          <td><img src="d6c58eg4.png" alt="Returnal"></td>
+          <td>$54.99</td>
+          <td>Una experiencia roguelike desafiante con gráficos impresionantes y una historia intrigante.</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Predator</td>
+          <td><img src="4q9urswk.png" alt="Predator"></td>
+          <td>$34.99</td>
+          <td>Un juego de acción basado en el icónico personaje de películas con una jugabilidad emocionante.</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>DAYS GONE</td>
+          <td><img src="7i66silp.png" alt="DAYS GONE"></td>
+          <td>$29.99</td>
+          <td>Una aventura de acción con una narrativa emocionante y un mundo expansivo.</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Uncharted</td>
+          <td><img src="0wqhdxvo.png" alt="Uncharted"></td>
+          <td>$59.99</td>
+          <td>Un juego de aventuras con una historia apasionante y secuencias de acción cinematográficas.</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <div id="ubicacion">
+      <h2>Encuentra Juegos en el Centro Comercial Guatapurí Plaza</h2>
+      <p>Visita el Centro Comercial Guatapurí Plaza en Valledupar para explorar una amplia variedad de juegos para PC y otras plataformas. Es el lugar perfecto para encontrar tus títulos favoritos y disfrutar de una experiencia de compra única.</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31384.638674619404!2d-73.30397338916018!3d10.4943728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e8ab8258306ad0b%3A0x6d7e72bbc8755bd1!2sPanamericana%20Valledupar%20C.C.%20Guatapur%C3%AD%20Plaza!5e0!3m2!1ses!2sco!4v1725591282550!5m2!1ses!2sco" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+  <div class="pie-pagina">
+    <div class="red-social-icons">
+      <a href="https://discord.gg/" class="discord" aria-label="Discord" target="_blank"></a>
+      <a href="https://www.instagram.com/" class="instagram" aria-label="Instagram" target="_blank"></a>
+      <a href="https://twitter.com/" class="twitter" aria-label="Twitter" target="_blank"></a>
+      <a href="https://www.youtube.com/" class="youtube" aria-label="YouTube" target="_blank"></a>
+    </div>
+    <div class="copyright">© 2024 Tu Sitio Web. Todos los derechos reservados.</div>
+  </div>
+</div>
+</body>
+</html>

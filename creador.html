@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Creador</title>
+<style type="text/css">
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700; 
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+#general {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh; 
+    position: relative;
+    text-align: center; 
+}
+
+#encabezado {
+    background-image: url('DYNASTY (2).png'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 300px;
+}
+
+#menu {
+    background-color: #560B0F; 
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#menu .btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #B71C1C;
+    background: #FFFFFF;
+    border-radius: 50px;
+    position: relative;
+    display: inline-flex; 
+    justify-content: center; 
+    align-items: center; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 10px; 
+    width: 120px;
+    line-height: 1.5;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+    border: 2px solid #FBC02D; 
+}
+
+#menu .btn:hover {
+    transform: translate(-10px, -10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: "Arial Black";
+}
+
+#contenido {
+    padding: 20px;
+    box-sizing: border-box;
+    margin: auto;
+    max-width: 900px;
+    position: relative;
+}
+
+#contenido h1, #contenido h2 {
+    color: #000000;
+    font-family: "Arial Black";
+}
+
+#contenido .section {
+    margin-bottom: 40px;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: left;
+}
+
+#contenido .section h2 {
+    border-bottom: 2px solid #560B0F;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+#contenido .section p {
+    line-height: 1.6;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #5B5858;
+}
+
+#contenido .section .card {
+    background-color: #F0F0F0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#contenido .section .card h3 {
+    margin-top: 0;
+    color: #560B0F;
+}
+
+#galeria {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center; 
+}
+
+#galeria h2 {
+    color: #040404;
+    margin-bottom: 20px;
+    font-family: "Arial Black";
+}
+
+#galeria .gallery-item {
+    display: inline-block;
+    width: calc(33.333% - 20px);
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+#galeria .gallery-item img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; 
+}
+
+#galeria .gallery-item img:hover {
+    transform: scale(1.05); 
+}
+
+#logo-container {
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+}
+
+#logo-container img {
+    max-width: 400px; 
+    height: auto;
+}
+
+#instagram-btn {
+    background: linear-gradient(to right, #f58529, #dd2a7b, #8134af, #515bd4); 
+    color: #FFFFFF;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1rem;
+    display: inline-block;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+#instagram-btn:hover {
+    background: linear-gradient(to right, #dd2a7b, #f58529, #515bd4, #8134af); 
+}
+
+.pie-pagina {
+    background-color: #560B0F;
+    padding: 20px 0;
+    color: #000000;
+    box-sizing: border-box;
+    text-align: center;
+    width: 100%;
+}
+
+.pie-pagina .red-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .red-social-icons a {
+    width: 40px;
+    height: 40px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    border: 2px solid #560B0F;
+    background-size: cover;
+    background-position: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.pie-pagina .red-social-icons a:hover {
+    background-color: #1e88e5;
+    transform: scale(1.1);
+}
+
+.pie-pagina .discord {
+    background-image: url('discord.png');
+}
+
+.pie-pagina .instagram {
+    background-image: url('instagram.png');
+}
+
+.pie-pagina .twitter {
+    background-image: url('twitter-alt.png');
+}
+
+.pie-pagina .youtube {
+    background-image: url('youtube.png');
+}
+
+.pie-pagina .copyright {
+    font-size: 14px;
+    color: #e0e0e0;
+}
+
+/* Nueva sección */
+#mi-colegio {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+#mi-colegio h2 {
+    color: #000000;
+    margin-bottom: 20px;
+    font-family: "Arial Black";
+}
+
+#mi-colegio img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+</style>
+</head>
+
+<body>
+<div id="general">
+  <div id="encabezado"></div>
+  <div id="menu">
+    <a href="index.html" class="btn">INICIO</a>
+    <a href="playstation.html" class="btn">PLAYSTATION</a>
+    <a href="xbox.html" class="btn">XBOX</a>
+    <a href="pc.html" class="btn">PC</a>
+    <a href="creador.html" class="btn">CREADOR</a>
+  </div>
+  <div id="contenido">
+    <h1>SOBRE MI&nbsp;</h1>
+    <div class="section">
+      <h2>Introducción</h2>
+      <p>¡Hola! Soy Daniel Eguis, un apasionado del mundo de la tecnología y el diseño. Actualmente, estudio en el Instituto de Educación Técnica y Profesional (Instpecam) en Colombia, donde estoy ampliando mis conocimientos y habilidades en el área de la informática y el desarrollo web.</p>
+    </div>
+    <div class="section">
+      <h2>Motivaciones</h2>
+      <p>Desde que comencé mi formación en Instpecam, he tenido la oportunidad de trabajar en una variedad de proyectos que van desde el desarrollo de sitios web hasta el diseño de interfaces de usuario atractivas. Esta experiencia me ha permitido combinar mi creatividad con mis habilidades técnicas para crear soluciones innovadoras.</p>
+      <ul>
+        <li><strong style="font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif">Videojuegos:</strong> <span style="font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #5B5858;">Desde pequeño, los videojuegos han sido una gran fuente de inspiración para mí. Me fascina cómo se combinan la programación, el diseño y la narrativa para crear experiencias inmersivas. Esto me impulsa a explorar y aprender más sobre el desarrollo de juegos y cómo se crean mundos virtuales cautivadores.</span></li>
+        <li><strong>Diseño Gráfico:</strong> <span style="color: #5B5858">El diseño gráfico es otra de mis pasiones. Me encanta cómo el diseño visual puede comunicar ideas y emociones de manera efectiva</span></li>
+        <li>Sistemas<strong>:</strong> <span style="color: #5B5858">Me interesa profundamente el funcionamiento interno de los sistemas y cómo se gestionan. disfruto de los desafíos técnicos y de la resolución de problemas complejos que involucran sistemas informáticos.</span></li>
+      </ul>
+      <p>Estoy siempre en busca de nuevas oportunidades para aprender y crecer en el campo de la tecnología. Si tienes un proyecto interesante o simplemente quieres hablar sobre tecnología, videojuegos, diseño gráfico o sistemas, no dudes en contactarme. Estoy abierto a nuevas ideas y colaboraciones.</p>
+    </div>
+  </div>
+  
+  <div id="mi-colegio">
+    <h2>Mi Colegio</h2>
+    <img src="sfd9s7et.png" alt="Foto del Colegio">
+  </div>
+  <div id="galeria">
+    <h2>JUEGOS FAVORITOS&nbsp;</h2>
+    <div class="gallery-item"><img src="xsz9grtl.png" alt="Foto 1"></div>
+    <div class="gallery-item"><img src="4i78p2me.png" alt="Foto 2"></div>
+    <div class="gallery-item"><img src="70qjs17c.png" alt="Foto 3"></div>
+    <div class="gallery-item"><img src="zah4ep5m.png" alt="Foto 4"></div>
+    <div class="gallery-item"><img src="qbt3oabm.png" alt="Foto 5"></div>
+    <div class="gallery-item"><img src="sbt0q3n2.png" alt="Foto 6"></div>
+  </div>
+  <div id="logo-container">
+    <a href="https://www.instagram.com/daneguis/" id="instagram-btn" target="_blank">Mi Instagram</a>
+    <img src="Logotipo_gamer_sencillo_minimalista_azul_-removebg-preview.png" alt="Logo en Grande">
+  </div>
+  <div class="pie-pagina">
+    <div class="red-social-icons">
+      <a href="https://discord.gg/" class="discord" aria-label="Discord" target="_blank"></a>
+      <a href="https://www.instagram.com/" class="instagram" aria-label="Instagram" target="_blank"></a>
+      <a href="https://twitter.com/" class="twitter" aria-label="Twitter" target="_blank"></a>
+      <a href="https://www.youtube.com/" class="youtube" aria-label="YouTube" target="_blank"></a>
+    </div>
+    <div class="copyright">© 2024 Tu Sitio Web. Todos los derechos reservados.</div>
+  </div>
+</div>
+</body>
+</html>

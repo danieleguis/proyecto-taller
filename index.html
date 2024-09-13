@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Inicio</title>
+<style type="text/css">
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700; 
+}
+
+#general {
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+#encabezado {
+    background-image: url('DYNASTY (2).png'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu {
+    background-color: #560B0F; 
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu .btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #B71C1C;
+    background: #FFFFFF;
+    border-radius: 50px;
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    margin: 0 10px; 
+    width: 120px;
+    line-height: 1.5;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+    border: 2px solid #FBC02D; 
+}
+
+#menu .btn::after, #menu .btn::before {
+    content: "";
+    position: absolute;
+    opacity: 0.3;
+    background: #FFFFFF;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+
+#menu .btn:hover {
+    transform: translate(-10px, -10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#menu .btn:hover::after {
+    transform: translate(5px, 5px);
+}
+
+#menu .btn:hover::before {
+    transform: translate(10px, 10px);
+}
+
+#contenido {
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#contenido .section {
+    margin-bottom: 30px; 
+    padding: 20px; 
+    border-radius: 8px;
+    background-color: #F9F9F9; 
+}
+
+#contenido h1 {
+    font-size: 28px; 
+    color: #000000;
+    margin-bottom: 15px; 
+    text-align: center;
+    font-family: "Arial Black";
+}
+
+#contenido p {
+    margin-bottom: 15px; 
+    line-height: 1.6;
+    text-align: center;
+    color: #6B6969;
+}
+
+#contenido .contenido-dynasty {
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+    margin-top: 20px; 
+}
+
+#contenido .contenido-dynasty .columna {
+    flex: 1;
+    max-width: 45%; 
+    text-align: center;
+}
+
+#contenido .contenido-dynasty .columna h2 {
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 10px;
+    font-family: "Arial Black";
+}
+
+#contenido .contenido-dynasty .columna p {
+    font-size: 16px;
+    color: #7F7979;
+    line-height: 1.6;
+    text-align: right;
+}
+
+#contenido .imagen-sustitucion {
+    position: relative;
+    display: flex; 
+    align-items: center;
+    gap: 20px; 
+    margin-top: 20px; 
+    text-align: left;
+    flex-wrap: wrap; 
+}
+
+#contenido .imagen-sustitucion img {
+    height: auto;
+    border-radius: 8px;
+    max-width: 400px; 
+    width: 100%;
+    transition: transform 0.3s ease; 
+}
+
+#contenido .imagen-sustitucion .imagen-sustitucion-texto {
+    max-width: 100%; 
+    flex: 1;
+}
+
+#contenido .imagen-sustitucion .imagen-sustitucion-texto h2 {
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 10px;
+    font-family: "Arial Black";
+    text-align: center;
+}
+
+#contenido .imagen-sustitucion .imagen-sustitucion-texto p {
+    font-size: 16px;
+    color: #7F7979;
+    line-height: 1.6;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+#contenido .imagen-sustitucion a {
+    display: block;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#contenido .imagen-sustitucion a img {
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+}
+
+#contenido .imagen-sustitucion a img.imagen-principal {
+    opacity: 1;
+}
+
+#contenido .imagen-sustitucion a img.imagen-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease; 
+}
+
+#contenido .imagen-sustitucion a:hover img.imagen-principal {
+    opacity: 0;
+}
+
+#contenido .imagen-sustitucion a:hover img.imagen-hover {
+    opacity: 1;
+}
+
+#galeria {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px; 
+    margin-top: 20px;
+}
+
+#galeria img {
+    width: 100%;
+    max-width: 200px; 
+    height: auto;
+    border: 2px solid #560B0F;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+#galeria img:hover {
+    transform: scale(1.05);
+}
+
+.pie-pagina {
+    width: 100%;
+    background-color: #560B0F;
+    padding: 20px 0; 
+    color: #fff;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.pie-pagina .red-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; 
+    margin-bottom: 10px; 
+}
+
+.pie-pagina .red-social-icons a {
+    width: 40px; 
+    height: 40px; 
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    border: 2px solid #560B0F;
+    background-size: cover;
+    background-position: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block; 
+}
+
+.pie-pagina .red-social-icons a:hover {
+    background-color: #1e88e5;
+    transform: scale(1.1);
+}
+
+.pie-pagina .discord {
+    background-image: url('discord.png');
+}
+
+.pie-pagina .instagram {
+    background-image: url('instagram.png');
+}
+
+.pie-pagina .twitter {
+    background-image: url('twitter-alt.png');
+}
+
+.pie-pagina .youtube {
+    background-image: url('youtube.png');
+}
+
+.pie-pagina .copyright {
+    font-size: 14px;
+    color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+    #contenido .contenido-dynasty {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    #contenido .contenido-dynasty .columna {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    #contenido .imagen-sustitucion {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center; 
+    }
+
+    #contenido .imagen-sustitucion img {
+        max-width: 100%; 
+    }
+
+    #contenido .imagen-sustitucion .imagen-sustitucion-texto {
+        max-width: 100%;
+    }
+
+    #galeria {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    #galeria img {
+        max-width: 100%; 
+    }
+
+    .pie-pagina .red-social-icons {
+        gap: 10px; 
+    }
+}
+</style>
+</head>
+
+<body>
+<div id="general">
+  <div id="encabezado"></div>
+  <div id="menu">
+    <a href="index.html" class="btn">INICIO</a>
+    <a href="playstation.html" class="btn">PLAYSTATION</a>
+    <a href="xbox.html" class="btn">XBOX</a>
+    <a href="pc.html" class="btn">PC</a>
+    <a href="creador.html" class="btn">CREADOR</a>
+  </div>
+  <div id="contenido">
+    <div class="section imagen-sustitucion">
+      <a href="#" target="_blank">
+        <img src="zah4ep5m.png" alt="Espacio para Imagen de Videojuegos" class="imagen-principal">
+        <img src="bymw4x5r.png" alt="Imagen Sustituta" class="imagen-hover">
+      </a>
+      <div class="imagen-sustitucion-texto">
+        <h2>Sobre Videojuegos</h2>
+        <p>En <strong>Dynasty</strong> ofrecemos contenido sobre videojuegos, donde puedes encontrar las últimas noticias, reseñas y análisis de los juegos más populares.</p>
+      </div>
+    </div>
+    <div class="section imagen-sustitucion">
+      <a href="#" target="_blank">
+        <img src="sbt0q3n2.png" alt="Espacio para Imagen de Tecnología" class="imagen-principal">
+        <img src="m6eeijxh.png" alt="Imagen Sustituta" class="imagen-hover">
+      </a>
+      <div class="imagen-sustitucion-texto">
+        <h2>Tecnología y más</h2>
+        <p>También cubrimos tecnología y otros temas relacionados. Explora nuestras secciones para descubrir lo último en el mundo de los videojuegos y la tecnología.</p>
+      </div>
+    </div>
+    <div class="section imagen-sustitucion">
+      <a href="https://youtu.be/vLj-27T-SEQ" target="_blank"> 
+        <img src="OIP (3).jfif" alt="Imagen de FIFA" class="imagen-principal">
+        <img src="OIP (4).jfif" alt="Imagen Sustituta" class="imagen-hover">
+      </a>
+      <div class="imagen-sustitucion-texto">
+        <h2>&nbsp;FIFA</h2>
+        <p>FIFA 21 es un videojuego de fútbol del año 2020 disponible para Microsoft Windows, PlayStation 4, Xbox One y Nintendo Switch el 9 de octubre de 2020, y también es el primer videojuego de la serie FIFA para PlayStation 5 y Xbox Series X|S.</p>
+      </div>
+    </div>
+    <div class="section">
+      <h2 style="font-family: 'Arial Black'; color: #000000;">JUEGOS DESTACADOS&nbsp;</h2>
+      <div id="galeria">
+          <img src="f26c0e8d7648240914c75c7c68a38fc4.jpg" alt="Galería 1" target="_blank">
+          <img src="xbox_scarlett-5207432.jpg" alt="Galería 2" target="_blank">
+          <img src="933-dark-souls-ii_1b3m.jpg" alt="Galería 3" target="_blank">
+          <img src="R.jfif" alt="Galería 4" target="_blank">
+      </div>
+    </div>
+  </div>
+  <div class="pie-pagina">
+    <div class="red-social-icons">
+      <a href="https://discord.gg/" class="discord" aria-label="Discord" target="_blank"></a>
+      <a href="https://www.instagram.com/" class="instagram" aria-label="Instagram" target="_blank"></a>
+      <a href="https://twitter.com/" class="twitter" aria-label="Twitter" target="_blank"></a>
+      <a href="https://www.youtube.com/" class="youtube" aria-label="YouTube" target="_blank"></a>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2024 Dynasty. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

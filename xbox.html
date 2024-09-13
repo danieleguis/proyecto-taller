@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>xbox</title>
+<style type="text/css">
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700; 
+}
+
+#general {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#encabezado {
+    background-image: url('DYNASTY (2).png'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 300px;
+}
+
+#menu {
+    background-color: #560B0F; 
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#menu .btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #B71C1C;
+    background: #FFFFFF;
+    border-radius: 50px;
+    position: relative;
+    display: inline-flex; 
+    justify-content: center; 
+    align-items: center; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 10px; 
+    width: 120px;
+    line-height: 1.5;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+    border: 2px solid #FBC02D; 
+}
+
+#menu .btn:hover {
+    transform: translate(-10px, -10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: "Arial Black";
+}
+
+#contenido {
+    background-color: #FFFFFF;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: auto;
+    max-width: 900px; 
+}
+
+#contenido .section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #F9F9F9;
+}
+
+#contenido h1 {
+    font-size: 28px;
+    color: #000000;
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: "Arial Black";
+}
+
+#contenido p {
+    line-height: 1.6;
+    color: #6B6969;
+    text-align: center;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 15px auto;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.audio-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.audio-section .audio-player {
+    width: 100%;
+    max-width: 600px;
+    background-color: #F9F9F9;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.audio-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #000000;
+    text-align: center;
+    font-family: "Arial Black";
+}
+
+.audio-player audio {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.feature-image-container {
+    text-align: center;
+    background-color: #F9F9F9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.feature-image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.feature-image-container p {
+    margin: 15px 0;
+    color: #6B6969;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.feature-image-container .btn-buy {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #FFFFFF;
+    background: #560B0F;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.feature-image-container .btn-buy:hover {
+    background-color: #B71C1C;
+    transform: scale(1.05);
+}
+
+.fixed-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.fixed-image-container img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+.fixed-image-container iframe {
+    position: absolute;
+    top: 349px;
+    left: 156px;
+    transform: translateX(-50%);
+    width: 312px;
+    height: 186px;
+    border: none;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.new-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.new-image-container img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+.new-image-container iframe {
+    position: absolute;
+    top: 334px;
+    left: 773px;
+    transform: translateX(-50%);
+    width: 324px;
+    height: 184px;
+    border: none;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.pie-pagina {
+    background-color: #560B0F;
+    padding: 20px 0;
+    color: #fff;
+    box-sizing: border-box;
+    text-align: center;
+    width: 100%;
+}
+
+.pie-pagina .red-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .red-social-icons a {
+    width: 40px;
+    height: 40px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    border: 2px solid #560B0F;
+    background-size: cover;
+    background-position: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.pie-pagina .red-social-icons a:hover {
+    background-color: #1e88e5;
+    transform: scale(1.1);
+}
+
+.pie-pagina .discord {
+    background-image: url('discord.png');
+}
+
+.pie-pagina .instagram {
+    background-image: url('instagram.png');
+}
+
+.pie-pagina .twitter {
+    background-image: url('twitter-alt.png');
+}
+
+.pie-pagina .youtube {
+    background-image: url('youtube.png');
+}
+
+.pie-pagina .copyright {
+    font-size: 14px;
+    color: #e0e0e0;
+}
+</style>
+</head>
+
+<body>
+<div id="general">
+  <div id="encabezado"></div>
+  <div id="menu">
+    <a href="index.html" class="btn">INICIO</a>
+    <a href="playstation.html" class="btn">PLAYSTATION</a>
+    <a href="xbox.html" class="btn">XBOX</a>
+    <a href="pc.html" class="btn">PC</a>
+    <a href="creador.html" class="btn">CREADOR</a>
+  </div>
+  <div id="contenido">
+    <div class="section">
+      <h1>NO TE DETENGAS&nbsp;</h1>
+      <p>Explora todo lo relacionado con Xbox, desde las últimas noticias hasta los juegos más esperados. Sumérgete en el mundo de Xbox y descubre por qué es una de las mejores opciones para los gamers.</p>
+    </div>
+
+    <div class="section feature-image-container">
+      <img src="s7ej9fa2.png" alt="Imagen Destacada Xbox" width="771" height="625">
+      <p>¡No te pierdas esta oferta exclusiva! Adquiere tu juego favorito con un 50% de descuento</p>
+    </div>
+
+    <div class="section gallery">
+      <img src="cdwvo06d.png" alt="Imagen Xbox 1">
+      <img src="mtvomqge.png" alt="Imagen Xbox 2">
+      <img src="3vpn5ew4.png" alt="Imagen Xbox 3">
+      <img src="h9x89ldq.png" alt="Imagen Xbox 4">
+      <img src="hbq7o5f6.png" alt="Imagen Xbox 5">
+      <img src="ok83rpre.png" alt="Imagen Xbox 6">
+    </div>
+
+    <div class="section fixed-image-container">
+      <img src="ew24moy5.png" alt="Imagen fija">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/F6yfej-uzYI?si=bWq_pBj-zfrlLwNL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <div class="section new-image-container">
+      <img src="eb5kjtaj.png" alt="Nueva Imagen">
+      <iframe src="https://www.youtube.com/embed/tfHsngH0a-8?si=F53EeZ5Pak6WgOI9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <div class="section news">
+      <div class="audio-section">
+        <h2>MUSIC&nbsp;</h2>
+        <div class="audio-player">
+          <audio controls>
+            <source src="Kanye_West_-_Flashing_Lights_ft_Dwele_(youconvert.net).mp3" type="audio/mpeg">
+          </audio>
+        </div>
+        <div class="audio-player">
+          <audio controls>
+            <source src="Travis_Scott_-_MY_EYES_Official_Audio_(youconvert.net).mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pie-pagina">
+    <div class="red-social-icons">
+      <a href="https://discord.gg/" class="discord" aria-label="Discord" target="_blank"></a>
+      <a href="https://www.instagram.com/" class="instagram" aria-label="Instagram" target="_blank"></a>
+      <a href="https://twitter.com/" class="twitter" aria-label="Twitter" target="_blank"></a>
+      <a href="https://www.youtube.com/" class="youtube" aria-label="YouTube" target="_blank"></a>
+    </div>
+    <div class="copyright">© 2024 Tu Sitio Web. Todos los derechos reservados.</div>
+  </div>
+</div>
+</body>
+</html>

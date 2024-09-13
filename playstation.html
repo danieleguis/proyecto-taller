@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Playstation</title>
+<style type="text/css">
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700; 
+}
+
+#general {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#encabezado {
+    background-image: url('DYNASTY (2).png'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 300px;
+}
+
+#menu {
+    background-color: #560B0F; 
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#menu .btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #B71C1C;
+    background: #FFFFFF;
+    border-radius: 50px;
+    position: relative;
+    display: inline-flex; 
+    justify-content: center; 
+    align-items: center; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 10px; 
+    width: 120px;
+    line-height: 1.5;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+    border: 2px solid #FBC02D; 
+}
+
+#menu .btn:hover {
+    transform: translate(-10px, -10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: "Arial Black";
+}
+
+#contenido {
+    background-color: #FFFFFF;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: auto;
+    max-width: 900px; 
+}
+
+#contenido .section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #F9F9F9;
+}
+
+#contenido h1 {
+    font-size: 28px;
+    color: #000000;
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: "Arial Black";
+}
+
+#contenido p {
+    line-height: 1.6;
+    color: #6B6969;
+    text-align: center;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 15px auto;
+}
+
+#contenido .nueva-estructura {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    justify-content: center; 
+    margin-top: 20px;
+}
+
+#contenido .nueva-estructura .columna {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #F9F9F9;
+    text-align: center;
+    box-sizing: border-box;
+    max-width: 400px; 
+    margin: auto; 
+    overflow: hidden; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contenido .nueva-estructura .columna img {
+    width: 100%;
+    max-width: 280px; 
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contenido .nueva-estructura .columna:hover img {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+#contenido .nueva-estructura .columna h2 {
+    font-size: 22px;
+    color: #000000;
+    margin-bottom: 10px;
+    font-family: "Arial Black";
+}
+
+#contenido .nueva-estructura .columna p {
+    font-size: 14px; 
+    color: #7F7979;
+    line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+    #contenido .nueva-estructura {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 768px) {
+    #contenido .nueva-estructura {
+        grid-template-columns: 1fr; 
+    }
+}
+
+.pie-pagina {
+    background-color: #560B0F;
+    padding: 20px 0;
+    color: #fff;
+    box-sizing: border-box;
+    text-align: center;
+    width: 100%;
+}
+
+.pie-pagina .red-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .red-social-icons a {
+    width: 40px;
+    height: 40px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    border: 2px solid #560B0F;
+    background-size: cover;
+    background-position: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.pie-pagina .red-social-icons a:hover {
+    background-color: #1e88e5;
+    transform: scale(1.1);
+}
+
+.pie-pagina .discord {
+    background-image: url('discord.png');
+}
+
+.pie-pagina .instagram {
+    background-image: url('instagram.png');
+}
+
+.pie-pagina .twitter {
+    background-image: url('twitter-alt.png');
+}
+
+.pie-pagina .youtube {
+    background-image: url('youtube.png');
+}
+
+.pie-pagina .copyright {
+    font-size: 14px;
+    color: #e0e0e0;
+}
+
+.carrusel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 900px; 
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+.carrusel img {
+    width: 100%;
+    display: block;
+}
+
+.carrusel .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrusel .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carrusel .prev, .carrusel .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carrusel .prev {
+    left: 10px;
+}
+
+.carrusel .next {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .carrusel .prev, .carrusel .next {
+        font-size: 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+<div id="general">
+  <div id="encabezado"></div>
+  <div id="menu">
+    <a href="index.html" class="btn">INICIO</a>
+    <a href="playstation.html" class="btn">PLAYSTATION</a>
+    <a href="xbox.html" class="btn">XBOX</a>
+    <a href="pc.html" class="btn">PC</a>
+    <a href="creador.html" class="btn">CREADOR</a>
+  </div>
+  <div id="contenido">
+    <div class="section">
+      <h1><strong>JUEGA EN TU MUNDO&nbsp;</strong></h1>
+      <p>Descubre los juegos que quieres, desde éxitos exclusivos a independientes innovadores; todos cobran vida con el poder de la consola</p>
+    </div>
+    <div class="section nueva-estructura">
+      <div class="columna">
+        <img src="8pr7e3vr.png" alt="Imagen de ejemplo 1">
+        <h2>SPIDER-MAN 2&nbsp;</h2>
+        <p>Los Spider-Men Peter Parker y Miles Morales regresan para una nueva y emocionante aventura de la aclamada franquicia Marvel's Spider-Man para PS5.</p>
+      </div>
+      <div class="columna">
+        <img src="3p9z2jqo.png" alt="Imagen de ejemplo 2">
+        <h2>FC24&nbsp;</h2>
+        <p>Con este título innovador y auténtico, te sentirás mucho más cerca del juego gracias a una experiencia de fútbol más real que nunca y a la compañia.</p>
+      </div>
+      <div class="columna">
+        <img src="mypd15x5.png" alt="Imagen de ejemplo 3">
+        <h2>HELLDIVERS&nbsp;</h2>
+        <p>¿Crees en la libertad? ¿Puedes enfrentar a la opresión y defender a los indefensos? Libra una guerra por la paz. Muere por la democracia.</p>
+      </div>
+      <div class="columna">
+        <img src="pu10thor.png" alt="Imagen de ejemplo 4">
+        <h2>FINAL FANTASY VII&nbsp;</h2>
+        <p>El icónico JRPG se ha rehecho desde el principio con gráficos y un sistema de combate completamente nuevos.</p>
+      </div>
+    </div>
+    <div class="carrusel">
+      <div class="slides">
+        <div class="slide">
+          <img src="rc50razs.png" alt="Slide 1">
+        </div>
+        <div class="slide">
+          <img src="z3382sau.png" alt="Slide 2">
+        </div>
+        <div class="slide">
+          <img src="slndh1po.png" alt="Slide 3">
+        </div>
+      </div>
+      <button class="prev">&lt;</button>
+      <button class="next">&gt;</button>
+    </div>
+  </div>
+  <div class="pie-pagina">
+    <div class="red-social-icons">
+      <a href="https://discord.gg/" class="discord" aria-label="Discord" target="_blank"></a>
+      <a href="https://www.instagram.com/" class="instagram" aria-label="Instagram" target="_blank"></a>
+      <a href="https://twitter.com/" class="twitter" aria-label="Twitter" target="_blank"></a>
+      <a href="https://www.youtube.com/" class="youtube" aria-label="YouTube" target="_blank"></a>
+    </div>
+    <div class="copyright">© 2024 Tu Sitio Web. Todos los derechos reservados.</div>
+  </div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const prevButton = document.querySelector('.carrusel .prev');
+    const nextButton = document.querySelector('.carrusel .next');
+    const slidesContainer = document.querySelector('.carrusel .slides');
+    const slides = document.querySelectorAll('.carrusel .slide');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        const totalSlides = slides.length;
+        if (index >= totalSlides) index = 0;
+        if (index < 0) index = totalSlides - 1;
+        slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+        currentIndex = index;
+    }
+
+    prevButton.addEventListener('click', () => {
+        showSlide(currentIndex - 1);
+    });
+
+    nextButton.addEventListener('click', () => {
+        showSlide(currentIndex + 1);
+    });
+
+    setInterval(() => {
+        showSlide(currentIndex + 1);
+    }, 3000);
+});
+</script>
+</body>
+</html>
